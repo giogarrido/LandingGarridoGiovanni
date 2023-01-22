@@ -1,0 +1,319 @@
+:root {
+    /*Nombre a colores y tipografías que se usaran*/
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --blanco: #FFFFFF;
+    --oscuro: #010101;
+    --primario: #006DB6;
+    --primarioOscuro: #03045E;
+    --gris: #757575;
+    --grisClaro: #CECFC9;
+}
+
+/*TIPOGRAFÍA*/
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    line-height: 1.2;
+    text-align: center;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 4.6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+    margin: 2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+    color: var(--grisClaro);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+
+}
+
+/*Declaro la fuente que se utilizara en el cuerpo*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primario);
+}
+
+/* Este es el contenedor principal para la distribución
+   de la página. Tiene dos columnas y tres filas */
+.contenedor__principal {
+    display: grid;
+    grid-template-rows: 85px calc(100vh - 133px) 48px;
+    grid-template-columns: 135px calc(100vw - 135px);
+}
+
+/* Barra de titulo. Este elemento esta en la primera filas
+   y abarca dos columnas */
+header {
+    grid-column: 1 / span 2;
+    background-image: url("../img/fondoHeader.jpg");
+
+}
+
+
+/* Barra de navegación. Este elemento esta en la segunda fila,
+   primera columna */
+nav {
+    background-color: var(--primarioOscuro);
+}
+
+/* Declaro la fuente a utilizar en el "main" y un scroll */
+main {
+    font-family: var(--fuenteParrafos);
+    overflow: scroll;
+}
+
+/* Pie de pagina.  */
+footer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondoHeader.jpg");
+    font-family: var(--fuenteHeading);
+    text-align: center;
+    font-size: 3rem;
+    color: var(--blanco);
+    overflow: hidden;
+
+
+}
+
+/*Da otra apariencia al elemento span */
+
+.header__span {
+    font-size: 1.5rem;
+    font-family: var(--fuenteParrafos);
+    font-style: italic;
+}
+
+/*IMÁGENES*/
+
+/*Tamaño de imagen logo*/
+.logo__imagen {
+    height: 30rem;
+    float: left;
+}
+
+/*Tamaño de imagen email*/
+.imagen__email {
+    height: 8rem;
+}
+
+/*Tamaño imagen de perfil*/
+.imagen__perfil {
+    height: 25rem;
+}
+
+/*Tamaño imagen de aficiones*/
+.imagen__aficiones {
+    width: 26rem;
+}
+
+
+/* NAVEGACIÓN PRINCIPAL*/
+
+.navegacion__enlace {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+/*Cambia atributos al pasar el puntero del mouse por encima*/
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    background-color: var(--primario);
+    font-weight: bolder;
+}
+
+/* CONTENEDORES */
+/*Atributos de los contenedores en general*/
+.contenedor {
+    display: grid;
+    margin: auto;
+    gap: 1rem;
+}
+
+/*centra el contenido del contenedor*/
+.contenedor > div.centrada {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Alinea a la derecha el contenido del contenedor */
+.contenedor > div.derecha {
+    text-align: right;
+}
+
+/* Este elemento grid abarca dos columnas */
+.contenedor > div.span {
+    grid-column: 1 / span 2;
+
+}
+
+/* index  */
+
+.contenedor__index {
+    grid-template-columns: 35% calc(65% - 1rem);
+}
+
+/*aficiones*/
+.contenedor__aficiones {
+    grid-template-columns: 40% calc(55% - 1rem);
+}
+
+/*contactame*/
+.contenedor__contactame {
+    grid-template-columns: 50% calc(50% - 1rem);
+    color: var(--blanco);
+    font-size: 2rem;
+    row-gap: 2rem;
+}
+
+/*tamaño de los fieldset, usados en la pagina de "contactame"*/
+fieldset {
+    width: 30rem;
+}
+
+/*atributos a usar en las listas*/
+ul {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-weight: bold;
+    line-height: 4rem;
+
+}
+
+/*IMAGEN DE MARCADOR*/
+ul.lista__index {
+    list-style-image: url("../img/imgListaPerfil.png");
+
+}
+
+ul.lista__aficiones-viajar {
+    list-style-image: url("../img/imgListasMoto.png");
+}
+
+ul.lista__aficiones-cocinar {
+    list-style-image: url("../img/imgListaCocina.png");
+}
+
+ul.lista__aficiones-series {
+    list-style-image: url("../img/imgListaSeries.png");
+}
+
+/*atributo a la lista*/
+.span__lista {
+    font-weight: normal;
+}
+
+/*Atributo de linea para decorar y separar contenido*/
+hr {
+    grid-column: 1 / span 2;
+    width: 90%;
+    height: 0.5rem;
+    background-color: var(--primarioOscuro);
+    border-color: var(--primarioOscuro);
+}
+
+
+/*TABLAS*/
+
+table {
+    border-collapse: separate;
+    border-spacing: inherit;
+    background-color: var(--grisClaro);
+    margin: auto;
+    border: var(--primarioOscuro) 0.6rem solid;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+/*tabla descripción*/
+.tabla__descripcion {
+    font-size: 1.5rem;
+}
+
+
+td {
+
+    border: var(--oscuro) 2px solid;
+    padding: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+th {
+    background-color: var(--primarioOscuro);
+    color: var(--blanco);
+    border: var(--grisClaro) 0.4rem solid;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+}
+
+.relleno__Tabla {
+    background-color: var(--gris);
+    border: var(--grisClaro) 2px solid;
+}
+
+/*Cambia atributos al pasar el puntero del mouse por encima en la tabla*/
+.link__tabla:hover {
+    background-color: var(--primario);
+    font-style: italic;
+}
+
+.link__tabla a:hover {
+    color: var(--blanco);
+}
+
+td > a {
+    text-decoration: none;
+    color: var(--oscuro);
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+.form button {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+}
+
+
