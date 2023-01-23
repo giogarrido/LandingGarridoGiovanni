@@ -38,6 +38,8 @@ h4 {
     color: var(--grisClaro);
 }
 
+
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*1 rem = 10px*/
@@ -138,6 +140,15 @@ footer {
     font-size: 2rem;
     padding: 0.5rem;
 }
+
+.enlace {
+    text-decoration: none;
+    font-size: 4rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*Cambia atributos al pasar el puntero del mouse por encima*/
 .navegacion__enlace--activo,
